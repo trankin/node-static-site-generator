@@ -10,7 +10,7 @@ var path  = require('path');
 
 
 
-module.exports = function (file, options) {
+module.exports = function (options) {
   var opts = options || {};
   opts.viewPath = opts.viewPath || path.resolve('./layouts');
   opts.renderedFileExtension = opts.renderedFileExtension || ".html";
