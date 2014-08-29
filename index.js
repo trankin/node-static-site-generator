@@ -38,7 +38,7 @@ var render = function(content, callback) {
       var metadata = '';
       var templateSrc = content;
       if (content.slice(0, 3) === '---') {
-          result = content.match(/^-{3,}\s([\s\S]*?)-{3,}(\s[\s\S]*|\s?)$/);
+          var result = content.match(/^-{3,}\s([\s\S]*?)-{3,}(\s[\s\S]*|\s?)$/);
           if ((result != null ? result.length : void 0) === 3) {
               metadata = result[1];
               templateSrc = result[2];
