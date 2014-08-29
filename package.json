@@ -1,0 +1,33 @@
+{
+  "name": "tomlr-static-site-generator",
+  "version": "0.0.1",
+  "description": "A tool to make it easier for html devs to build static sites with the vash templating system and a yaml header preprocessor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trankin/node-static-site-generator.git"
+  },
+  "keywords": [
+    "tomlr",
+    "static",
+    "site",
+    "generator",
+    "vash",
+    "yaml"
+  ],
+  "author": "tomlr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trankin/node-static-site-generator/issues"
+  },
+  "homepage": "https://github.com/trankin/node-static-site-generator",
+  "dependencies": {
+    "gulp-util": "^3.0.1",
+    "js-yaml": "^3.2.1",
+    "map-stream": "^0.1.0",
+    "vash": "^0.7.12-1"
+  }
+}
