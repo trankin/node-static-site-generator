@@ -8,19 +8,24 @@ var gutil = require('gulp-util');
 var path  = require('path');
 
 
-vash.config.settings = vash.config.settings || {};
-vash.config.settings.views = path.resolve('./layouts');
 
 
 module.exports = function (file, options) {
   var opts = options || {};
+  opts.viewPath = opts.viewPath || path.resolve('./layouts');
+  opts.renderedFileExtension = opts.renderedFileExtension || ".html";
+
+  vash.config.settings = vash.config.settings || {};
+  vash.config.settings.views = opts.viewPath;
+
+
 
   function renderContent (file, cb) {
 
     render(file.contents, function(err, fileContents){
       if(!err) {
         file.contents = fileContents;
-        file.path = gutil.replaceExtension(file.path, ".html");
+        file.path = gutil.replaceExtension(file.path, opts.renderedFileExtension);
         cb(null, file);
       } else {
         cb(err, file);
